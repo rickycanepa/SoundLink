@@ -11,7 +11,7 @@ export const StaffViews = () => {
         <Routes>
             <Route path="/" element={
                 <>
-                    <h1>SoundLink</h1>
+                    <h1 className="py-32 text-center font-extrabold text-4xl bof">SoundLink</h1>
 
                     <Outlet />
                 </>

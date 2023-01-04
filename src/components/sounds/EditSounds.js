@@ -39,14 +39,14 @@ export const SoundEdit = () => {
 
 
     return     <form className="soundForm">
-    <h2 className="soundForm__title">New Song</h2>
-    <fieldset>
+            <fieldset>
         <div className="form-group">
-            <label htmlFor="title">Song Title:</label>
+            <label htmlFor="title" className="flex justify-center block mb-2 text-lg font-medium text-gray-900 dark:text-black">Song Title:</label>
+            <div className="flex justify-center">
             <input
                 required autoFocus
                 type="text"
-                className="form-control"
+                className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Song Title"
                 value={sounds.songTitle}
                 onChange={
@@ -56,33 +56,17 @@ export const SoundEdit = () => {
                         setSounds(copy)
                     }
                 } />
+                </div>
         </div>
     </fieldset>
     <fieldset>
         <div className="form-group">
-            <label htmlFor="audioURL">URL:</label>
+            <label htmlFor="genre" className="flex justify-center block mb-2 text-lg font-medium text-gray-900 dark:text-black">Genre:</label>
+            <div className="flex justify-center">
             <input
                 required autoFocus
                 type="text"
-                className="form-control"
-                placeholder="URL"
-                value={sounds.audioURL}
-                onChange={
-                    (evt) => {
-                        const copy = {...sounds}
-                        copy.audioURL = evt.target.value
-                        setSounds(copy)
-                    }
-                } />
-        </div>
-    </fieldset>
-    <fieldset>
-        <div className="form-group">
-            <label htmlFor="genre">Genre:</label>
-            <input
-                required autoFocus
-                type="text"
-                className="form-control"
+                className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Genre"
                 value={sounds.genre}
                 onChange={
@@ -92,15 +76,17 @@ export const SoundEdit = () => {
                         setSounds(copy)
                     }
                 } />
+                </div>
         </div>
     </fieldset>
     <fieldset>
         <div className="form-group">
-            <label htmlFor="bpm">BPM:</label>
+            <label htmlFor="bpm" className="flex justify-center block mb-2 text-lg font-medium text-gray-900 dark:text-black">BPM:</label>
+            <div className="flex justify-center">
             <input
                 required autoFocus
                 type="number"
-                className="form-control"
+                className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="BPM"
                 value={sounds.bpm}
                 onChange={
@@ -110,15 +96,17 @@ export const SoundEdit = () => {
                         setSounds(copy)
                     }
                 } />
+                </div>
         </div>
     </fieldset>
     <fieldset>
         <div className="form-group">
-            <label htmlFor="key">Key:</label>
+            <label htmlFor="key" className="flex justify-center block mb-2 text-lg font-medium text-gray-900 dark:text-black">Key:</label>
+            <div className="flex justify-center">
             <input
                 required autoFocus
                 type="text"
-                className="form-control"
+                className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Key"
                 value={sounds.key}
                 onChange={
@@ -128,13 +116,16 @@ export const SoundEdit = () => {
                         setSounds(copy)
                     }
                 } />
-        </div>
+                </div>
+            </div>
     </fieldset>
+    <div className="flex justify-center">
     <button 
     onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
     className="btn btn-primary">
         Save Edits
     </button>
+    </div>
 </form>
 
 }

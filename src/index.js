@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client"
-import "./index.css"
+import "./input.css"
 import { BrowserRouter } from "react-router-dom"
 import { SoundLink } from "./components/SoundLink"
 

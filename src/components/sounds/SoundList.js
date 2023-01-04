@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import "./SoundList.css"
+
 
 export const SoundList = ({ searchTermState }) => {
     const [sounds, setSounds] = useState([])
@@ -33,16 +33,16 @@ useEffect(
 )
 
 return(<>
-<h2>Sound Feed</h2>
+<h2 className="py-32 text-center font-extrabold text-4xl bof">Sound Feed</h2>
 
-<article className="sounds">
+<article className="flex justify-center">
     {
         sounds.map(sound => {
-            return <section className="sound" key={sound.id}>
-                <h3>Title: {sound.songTitle}</h3>
-                <p>Artist: {sound?.user?.fullName} </p>
-                <p>BPM: {sound.bpm}</p>
-                <p>Genre: {sound.genre}</p>
+            return <section className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-g" key={sound.id}>
+                <div className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{sound.songTitle}</div>
+                <p className="font-normal text-white dark:text-white">Artist: {sound?.user?.fullName} </p>
+                <p className="font-normal text-white dark:text-white">BPM: {sound.bpm}</p>
+                <p className="font-normal text-white dark:text-white">Genre: {sound.genre}</p>
                 <audio controls src={sound.audioURL} type="audio">
                 </audio>
                 </section>

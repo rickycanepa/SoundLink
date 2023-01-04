@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import "./SoundList.css"
+
 
 export const UserSoundList = ({ searchTermState }) => {
     const [sounds, setSounds] = useState([])

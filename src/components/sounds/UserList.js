@@ -33,15 +33,15 @@ const handleClick = (user) => {
 }
 
 return(<>
-<h2>Users List</h2>
+<h2 className="py-32 text-center font-extrabold text-4xl bof">User List</h2>
 
-<article className="users">
+<article className="flex justify-center">
     {
         users.map(user => {
-            return <section className="user" key={user.id}>
-                <header>User: {user.fullName}</header>
-                <p>Email: {user.email} </p>
-                <button onClick={() => handleClick(user)}>Ban</button>
+            return <section className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-g" key={user.id}>
+                <header className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">User: {user.fullName}</header>
+                <p className="font-normal text-white dark:text-white">Email: {user.email} </p>
+                <button className="font-normal text-white dark:text-white" onClick={() => handleClick(user)}>Ban</button>
                 </section>
         })
     }

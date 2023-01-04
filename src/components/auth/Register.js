@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import "./Login.css"
+
 
 export const Register = (props) => {
     const [user, setUser] = useState({
@@ -54,35 +54,44 @@ export const Register = (props) => {
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for SoundLink</h1>
+                <h1 className="py-32 text-center font-extrabold text-4xl bof">Please Register for SoundLink</h1>
                 <fieldset>
-                    <label htmlFor="fullName"> Full Name </label>
+                    <label htmlFor="fullName" className="flex justify-center block mb-2 text-lg font-medium text-gray-900 dark:text-black"> Full Name </label>
+                    <div className="flex justify-center">
                     <input onChange={updateUser}
-                           type="text" id="fullName" className="form-control"
+                           className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                           type="text" id="fullName"
                            placeholder="Enter your name" required autoFocus />
+                    </div>
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="email"> Email address </label>
+                    <label htmlFor="email" className="flex justify-center block mb-2 text-lg font-medium text-gray-900 dark:text-black"> Email address </label>
+                    <div className="flex justify-center">
                     <input onChange={updateUser}
-                        type="email" id="email" className="form-control"
+                        className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        type="email" id="email"
                         placeholder="Email address" required />
+                        </div>
                 </fieldset>
                 <fieldset>
+                <label htmlFor="email" className="flex justify-center block mb-2 text-lg font-medium text-gray-900 dark:text-black"> I am an employee </label>
+                    <div className="flex justify-center">
                     <input onChange={(evt) => {
                         const copy = {...user}
                         copy.isStaff = evt.target.checked
                         setUser(copy)
                     }}
-                        type="checkbox" id="isStaff" />
-                    <label htmlFor="email"> I am an employee </label>
+                        type="checkbox" id="isStaff"  />
+                        </div>
+                    
                 </fieldset>
                 <fieldset>
+                    <div className="flex justify-center block mb-2 text-lg font-medium text-gray-900 dark:text-black">
                     <button type="submit"> Register </button>
+                    </div>
                 </fieldset>
             </form>
-        </main>
     )
 }
 
