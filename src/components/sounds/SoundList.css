@@ -1,0 +1,19 @@
+.sound {
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-bottom: 1px solid #fafafa; 
+    background-color: #D2691E; 
+    color: black;
+}
+
+.sound:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.891);  
+}
+
+.sound h3 {
+    background-color: #D2691E;
+}
+
+.sound p {
+    background-color: #D2691E;
+}

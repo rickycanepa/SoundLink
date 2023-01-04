@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./SoundList.css"
 
 export const SoundList = ({ searchTermState }) => {
     const [sounds, setSounds] = useState([])
@@ -38,7 +39,7 @@ return(<>
     {
         sounds.map(sound => {
             return <section className="sound" key={sound.id}>
-                <header>Title: {sound.songTitle}</header>
+                <h3>Title: {sound.songTitle}</h3>
                 <p>Artist: {sound?.user?.fullName} </p>
                 <p>BPM: {sound.bpm}</p>
                 <p>Genre: {sound.genre}</p>
