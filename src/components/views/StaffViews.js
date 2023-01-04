@@ -3,6 +3,7 @@ import { SoundEdit } from "../sounds/EditSounds"
 import { MySounds } from "../sounds/MySounds"
 import { SoundContainer } from "../sounds/SoundContainer"
 import { SoundForm } from "../sounds/SoundForm"
+import { UserList } from "../sounds/UserList"
 
 
 export const StaffViews = () => {
@@ -20,6 +21,7 @@ export const StaffViews = () => {
                 <Route path="/upload" element={ <SoundForm />} />
                 <Route path="/usersounds" element={ <MySounds />} />
                 <Route path="/edit/:soundId" element={ <SoundEdit /> } />
+                <Route path="/userlist" element={ <UserList /> } />
             </Route>
         </Routes>
     )

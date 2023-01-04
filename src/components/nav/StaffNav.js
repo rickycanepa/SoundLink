@@ -15,6 +15,9 @@ export const StaffBar = () => {
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/upload">Upload</Link>
             </li>
+            <li className="navbar__item active">
+                <Link className="navbar__link" to="/userlist">User List</Link>
+            </li>
             <li className="navbar__item navbar__logout">
                 <Link className="navbar__link" to="" onClick={() => {
                     localStorage.removeItem("sound_user")

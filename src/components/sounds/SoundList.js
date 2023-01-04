@@ -39,7 +39,7 @@ return(<>
         sounds.map(sound => {
             return <section className="sound" key={sound.id}>
                 <header>Title: {sound.songTitle}</header>
-                <p>Artist: {sound?.user?.name} </p>
+                <p>Artist: {sound?.user?.fullName} </p>
                 <p>BPM: {sound.bpm}</p>
                 <p>Genre: {sound.genre}</p>
                 <audio controls src={sound.audioURL} type="audio">

@@ -9,6 +9,12 @@ export const UserBar = () => {
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/">Sound Feed</Link>
             </li>
+            <li className="navbar__item active">
+                <Link className="navbar__link" to="/usersounds">My Sounds</Link>
+            </li>
+            <li className="navbar__item active">
+                <Link className="navbar__link" to="/upload">Upload</Link>
+            </li>           
             <li className="navbar__item navbar__logout">
                 <Link className="navbar__link" to="" onClick={() => {
                     localStorage.removeItem("sound_user")

@@ -3,10 +3,10 @@ import { UserViews } from "./UserViews"
 
 export const ApplicationViews = () => {
 	
-    const localHoneyUser = localStorage.getItem("honey_user")
-    const honeyUserObject = JSON.parse(localHoneyUser)
+    const localSoundUser = localStorage.getItem("sound_user")
+    const soundUserObject = JSON.parse(localSoundUser)
 
-    if (honeyUserObject.staff) {
+    if (soundUserObject.staff) {
         return <StaffViews />
     }
     else {
