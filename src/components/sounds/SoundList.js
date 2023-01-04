@@ -40,8 +40,8 @@ return(<>
             return <section className="sound" key={sound.id}>
                 <header>Title: {sound.songTitle}</header>
                 <p>Artist: {sound?.user?.name} </p>
-                <p>{sound.bpm}</p>
-                <p>{sound.genre}</p>
+                <p>BPM: {sound.bpm}</p>
+                <p>Genre: {sound.genre}</p>
                 <audio controls src={sound.audioURL} type="audio">
                 </audio>
                 </section>
